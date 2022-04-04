@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import axios from "axios";
 import Recipes from "./Recipes";
 
-export default function RecipeSearch() {
-  let [searchResult, setSearchResult] = useState("Pasta");
+export default function RecipeSearch(props) {
+  let [searchResult, setSearchResult] = useState(props.default);
   let [loaded, setLoaded] = useState(false);
   let [recipes, setRecipes] = useState(null);
 
   function handleUpdate(response) {
+    console.log(response.data.results);
     setRecipes(response.data.results);
   }
 
   function search() {
     let apiKey = "16fc38902d074c0a8b4b6cde2b677493";
-    let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${searchResult}&apiKey=${apiKey}`;
+    let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${searchResult}&addRecipeInformation=true&apiKey=${apiKey}`;
     axios.get(apiUrl).then(handleUpdate);
   }
 
