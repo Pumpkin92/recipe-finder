@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./recipes.css";
 
 export default function Recipes(props) {
   if (props.recipes) {
@@ -8,10 +9,18 @@ export default function Recipes(props) {
           {props.recipes.map(function (recipe, index) {
             return (
               <div key={index}>
-                {recipe.title}
-                <img src={recipe.image} />
-                {recipe.summary}
-                <a href={recipe.sourceUrl}>Recipe here!</a>
+                {" "}
+                <br />
+                <h2>{recipe.title} </h2>
+                <a href={recipe.sourceUrl}>Recipe here!</a> <br />
+                <img src={recipe.image} className="recipePicture" /> <br />
+                <div className="recipeInfoDiv">
+                  <ul className="recipeInfo">
+                    <li>Servings: {recipe.servings}</li>
+                    <li>Average rating: {recipe.spoonacularScore} </li>
+                  </ul>
+                </div>
+                <hr></hr>
               </div>
             );
           })}

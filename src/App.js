@@ -4,7 +4,7 @@ import RecipeSearch from "./RecipeSearch";
 function App() {
   return (
     <div className="App">
-      <RecipeSearch default={"pasta"} />
+      <RecipeSearch default={"Pasta"} />
     </div>
   );
 }

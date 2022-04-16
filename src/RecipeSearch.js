@@ -40,7 +40,7 @@ export default function RecipeSearch(props) {
             <input
               type="search"
               onChange={handleSearchResult}
-              placeholder="Search for an ingredient or recipe"
+              placeholder={searchResult}
             ></input>
           </form>
         </section>
