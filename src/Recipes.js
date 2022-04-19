@@ -19,6 +19,8 @@ export default function Recipes(props) {
                     <li>Servings: {recipe.servings}</li>
                     <li>Average rating: {recipe.spoonacularScore} </li>
                   </ul>
+                  <div dangerouslySetInnerHTML={{ __html: recipe.summary }} />
+                  <br />
                 </div>
                 <hr></hr>
               </div>
