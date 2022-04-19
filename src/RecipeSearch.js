@@ -42,6 +42,7 @@ export default function RecipeSearch(props) {
               onChange={handleSearchResult}
               placeholder={searchResult}
             ></input>
+            <button onClick={handleSubmit}>🔍</button>
           </form>
         </section>
         <Recipes recipes={recipes} />

@@ -16,3 +16,9 @@
 h2 {
   font-size: 2.5rem;
 }
+
+button {
+  margin-left: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-top: 0.1rem;
+}
